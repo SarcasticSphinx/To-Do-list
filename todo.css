@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply w-screen h-screen flex flex-col items-center justify-center bg-black text-white;
+    font-family:monospace;
+}
+.todo-list-grid, .input-grid{
+    display: grid;
+    grid-template-columns: 300px 150px 100px;
+    column-gap: 10px;
+    row-gap: 5px;
+    align-items: center;
+}
+
+h1{
+    @apply text-3xl font-bold m-3;
+}
+.ToDo, .date{
+    @apply p-2 px-3 border-2 border-gray-300 rounded-md w-full text-base text-black bg-gray-100 transition-all duration-200;
+}
+.ToDo:focus, .date:focus{
+    @apply outline-none scale-105;
+}
+.input-button, .delete-button{
+    @apply p-2 bg-green-500 text-white text-base font-semibold rounded-md transition-all duration-150;
+}
+.input-button:hover, .delete-button:hover{
+    transform: translateY(-1px) scale(1.05);
+}
+.delete-button{
+    @apply bg-red-500 px-[22px];
+}
+#tasks{
+    @apply ml-2 mt-4 text-xl;
+}
